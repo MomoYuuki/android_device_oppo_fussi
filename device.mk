@@ -30,7 +30,7 @@ PRODUCT_COPY_FILES += \
 # Commondcs
 PRODUCT_PACKAGES += \
     vendor.oplus.hardware.commondcs-service
-    
+
 # Display
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display_id_4630946292801050754.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946292801050754.xml
@@ -64,6 +64,10 @@ PRODUCT_PACKAGES += \
     OPlusSettingsResTarget \
     OPlusSystemUIResTarget
 
+# Osense
+PRODUCT_PACKAGES += \
+    vendor.oplus.hardware.osense.client-service
+    
 # PowerShare
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare-service.oplus
