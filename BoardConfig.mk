@@ -9,6 +9,9 @@ include device/oneplus/sm8350-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/oppo/fussi
 
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # Display
 TARGET_SCREEN_DENSITY := 450
 SOONG_CONFIG_qtidisplay_udfps := true
