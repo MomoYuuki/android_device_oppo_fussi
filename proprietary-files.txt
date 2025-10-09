@@ -677,9 +677,6 @@ odm/lib64/libaiboost.so
 odm/lib64/libaiboost_QnnHtpAltPrepStub.so;FIX_SONAME
 odm/lib64/libaiboost_QnnHtpStub.so;FIX_SONAME
 odm/lib64/libaiboost_hexagon.so;DISABLE_CHECKELF
-odm/lib64/libaiboost_qnn_sr.so
-odm/lib64/libaiboost_sr.so
-odm/lib64/libaiboost_ubwc.so
 odm/lib64/libaisal.so
 odm/lib64/libaisd.so
 odm/lib64/libaiseg.so
