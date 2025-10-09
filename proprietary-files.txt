@@ -1002,6 +1002,13 @@ odm/vendor/firmware/goodixfp.mdt
 vendor/etc/ltm_config_samsung_S6E3HC3_dsc_cmd_mode_panel.xml
 vendor/etc/qdcm_calib_data_samsung_S6E3HC3_dsc_cmd_mode_panel.xml
 
+# Display eye protection data
+odm/etc/samsung1024_s6e3hc3_eyeprotect_data.xml
+odm/etc/samsung1024_s6e3hc3_srgb_eyeprotect_data.xml
+odm/etc/samsung1024_s6e3hc3_cinema_eyeprotect_data.xml
+odm/etc/samsung1024_s6e3hc3_colorful_eyeprotect_data.xml
+
+
 # Graphics (Adreno firmware)
 vendor/firmware/a660_gmu.bin
 vendor/firmware/a660_sqe.fw
