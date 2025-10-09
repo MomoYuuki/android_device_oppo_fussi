@@ -106,6 +106,10 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_lock')
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock'),
+    'odm/lib/libVDBlurlessAPI_v2.so': blob_fixup()
+        .clear_symbol_version('remote_handle_close')
+        .clear_symbol_version('remote_handle_invoke')
+        .clear_symbol_version('remote_handle_open'),
     'vendor/etc/libnfc-nci.conf': blob_fixup()
         .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
     'vendor/etc/libnfc-nxp.conf': blob_fixup()
