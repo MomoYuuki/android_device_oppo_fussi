@@ -11,6 +11,7 @@ DEVICE_PATH := device/oppo/fussi
 
 # Display
 TARGET_SCREEN_DENSITY := 450
+SOONG_CONFIG_qtidisplay_udfps := true
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
