@@ -4,6 +4,7 @@ bluetooth.device.default_name=OPPO Find X3 Pro
 # Graphics
 ro.surface_flinger.set_idle_timer_ms=250
 ro.surface_flinger.set_touch_timer_ms=300
+debug.hwui.use_partial_updates=false
 
 # Radio
 persist.radio.multisim.config=dsds
