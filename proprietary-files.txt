@@ -998,6 +998,26 @@ odm/vendor/firmware/goodixfp.b06
 odm/vendor/firmware/goodixfp.b07
 odm/vendor/firmware/goodixfp.mdt
 
+# Fingerprint Pay
+odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprintpay@1.0-service
+odm/etc/init/vendor.oplus.hardware.biometrics.fingerprintpay@1.0-service.rc
+odm/etc/vintf/manifest/manifest_oplus_ifaa_r.xml
+odm/lib64/libifaa_factory.so
+odm/lib64/librpmbengclient.so
+odm/lib64/libsecurity_event_dcs_vnd.so
+odm/lib64/vendor.oplus.hardware.biometrics.fingerprintpay-V1-ndk_platform.so
+
+# Fingerprint Pay firmware
+odm/vendor/firmware/alipay.b00
+odm/vendor/firmware/alipay.b01
+odm/vendor/firmware/alipay.b02
+odm/vendor/firmware/alipay.b03
+odm/vendor/firmware/alipay.b04
+odm/vendor/firmware/alipay.b05
+odm/vendor/firmware/alipay.b06
+odm/vendor/firmware/alipay.b07
+odm/vendor/firmware/alipay.mdt
+
 # Display calibration data
 vendor/etc/ltm_config_samsung_S6E3HC3_dsc_cmd_mode_panel.xml
 vendor/etc/qdcm_calib_data_samsung_S6E3HC3_dsc_cmd_mode_panel.xml
