@@ -1081,6 +1081,9 @@ odm/etc/irissoft.fw
 # Keymaster
 odm/lib64/android.hardware.keymaster-V3-ndk_platform.so
 
+# Misc
+odm/etc/init/init.oppo.reserve.rc
+
 # NFC
 odm/etc/nfc/libnfc-mtp-SN100.conf_20031:vendor/etc/libnfc-nxp.conf
 odm/etc/nfc/libnfc-nci.conf_20031:vendor/etc/libnfc-nci.conf
