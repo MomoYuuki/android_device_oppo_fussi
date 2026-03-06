@@ -21,18 +21,6 @@ PRODUCT_MANUFACTURER := OPPO
 PRODUCT_BRAND := OPPO
 PRODUCT_MODEL := CPH2173
 
-# CORE build flags
-WITH_GMS := true
-
-# Disable/enable blur support, false by default
-TARGET_ENABLE_BLUR := true
-
-# Ship Pixel Launcher
-TARGET_DEFAULT_PIXEL_LAUNCHER := true
-
-# Whether to ship prebuilt Google Dialer and Messages, false by default
-TARGET_INCLUDE_GOOGLE_DIALER := true
-
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
