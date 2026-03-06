@@ -82,6 +82,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare-service.oplus
 
+# Performance
+PRODUCT_PACKAGES += \
+    vendor.oplus.hardware.performance-service
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
