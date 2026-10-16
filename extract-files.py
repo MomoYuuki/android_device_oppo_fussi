@@ -26,6 +26,7 @@ from extract_utils.utils import (
 
 namespace_imports = [
     'hardware/oplus',
+    'vendor/oppo/fussi',
     'vendor/oneplus/sm8350-common',
     'vendor/qcom/opensource/display',
 ]
@@ -71,9 +72,9 @@ def blob_fixup_nop_call(
 blob_fixups: blob_fixups_user_type = {
     'odm/etc/camera/CameraHWConfiguration.config': blob_fixup()
         .regex_replace('SystemCamera =  0;  0;  1;  1;  1;  1', 'SystemCamera =  0;  0;  0;  0;  0;  1'),
-    ('odm/lib/liblvimfs_wrapper.so', 'odm/lib64/libCOppLceTonemapAPI.so', 'odm/lib64/libaps_frame_registration.so', 'vendor/lib64/libalsc.so'): blob_fixup()
+    ('odm/lib/liblvimfs_wrapper.so', 'odm/lib64/libCOppLceTonemapAPI.so', 'odm/lib64/libYTCommon.so', 'odm/lib64/libaps_frame_registration.so', 'vendor/lib64/libalsc.so'): blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
-    ('odm/lib/libdehaze.so', 'odm/lib64/libarcsoft_hdrplus_hvx_stub.so', 'odm/lib64/libarcsoft_high_dynamic_range_v4.so', 'odm/lib64/libarcsoft_portrait_super_night_raw.so', 'odm/lib64/libarcsoft_super_night_raw.so'): blob_fixup()
+    ('odm/lib/libdehaze.so', 'odm/lib64/libarcsoft_high_dynamic_range_v4.so', 'odm/lib64/libarcsoft_portrait_super_night_raw.so', 'odm/lib64/libarcsoft_super_night_raw.so'): blob_fixup()
         .clear_symbol_version('remote_handle_close')
         .clear_symbol_version('remote_handle_invoke')
         .clear_symbol_version('remote_handle_open')
@@ -93,13 +94,17 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_lock')
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock'),
+    'odm/lib/libVDBlurlessAPI_v2.so': blob_fixup()
+        .clear_symbol_version('remote_handle_close')
+        .clear_symbol_version('remote_handle_invoke')
+        .clear_symbol_version('remote_handle_open'),
+    'odm/lib64/vendor.oplus.hardware.urcc-V1-ndk_platform.so': blob_fixup()
+        .add_needed('libjsoncpp_shim.so'),
     'vendor/etc/libnfc-nci.conf': blob_fixup()
         .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
     'vendor/etc/libnfc-nxp.conf': blob_fixup()
         .regex_replace('(NXPLOG_.*_LOGLEVEL)=0x03', '\\1=0x02')
         .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
-    'vendor/lib64/libmidasserviceintf_aidl.so': blob_fixup()
-        .remove_needed('android.frameworks.stats@1.0.so'),
     'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so': blob_fixup()
         .call(blob_fixup_nop_call, 'bl', '__cfi_check', '_ZN7android8hardware22configureRpcThreadpoolEmb@plt'),
 }  # fmt: skip
