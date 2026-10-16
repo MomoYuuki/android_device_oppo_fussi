@@ -105,8 +105,8 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'lemonadep',
-    'oneplus',
+    'fussi',
+    'oppo',
     namespace_imports=namespace_imports,
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
