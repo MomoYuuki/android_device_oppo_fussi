@@ -68,6 +68,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Vibrator
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.vibrator.service
+
+$(call soong_config_set_bool,qti_vibrator,use_effect_stream,true)
+$(call soong_config_set_bool,qti_vibrator,use_libpalclient,false)
+$(call soong_config_set,qti_vibrator,effect_lib,libqtivibratoreffect.fussi)
+
+PRODUCT_COPY_FILES += \
+    vendor/qcom/opensource/vibrator/aidl/HapticsPolicyOL.xml:$(TARGET_COPY_OUT_VENDOR)/etc/HapticsPolicy.xml \
+    vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
+    
 # Touch
 $(call soong_config_set,OPLUS_LINEAGE_TOUCH_HAL,INCLUDE_DIR,$(LOCAL_PATH)/touch/include)
 

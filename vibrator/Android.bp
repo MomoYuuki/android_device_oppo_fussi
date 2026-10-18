@@ -1,0 +1,10 @@
+// SPDX-License-Identifier: Apache-2.0
+
+cc_library_shared {
+    name: "libqtivibratoreffect.fussi",
+    vendor: true,
+    srcs: ["effect.cpp"],
+    local_include_dirs: ["include"],
+    header_libs: ["libqtivibratoreffect_headers"],
+    cflags: ["-Wall", "-Wextra", "-Werror"],
+}
