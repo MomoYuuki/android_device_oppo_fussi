@@ -11,6 +11,7 @@ DEVICE_PATH := device/oppo/fussi
 
 # Display
 TARGET_SCREEN_DENSITY := 420
+TARGET_USES_FOD_ZPOS := true
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
