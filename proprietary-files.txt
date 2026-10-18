@@ -743,7 +743,6 @@ odm/lib64/libimgClarityEvaluate.so
 odm/lib64/libml_util.so
 odm/lib64/libmpbase.so
 odm/lib64/libnpu.so
-odm/lib64/libop-ai-beauty-body-detection.so;FIX_SONAME
 odm/lib64/libop-ai-beauty-faceretouch-cn.so
 odm/lib64/liboptical_zoom_dc.so
 odm/lib64/liboptical_zoom_vs.so
